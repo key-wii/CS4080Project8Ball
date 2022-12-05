@@ -15,4 +15,8 @@
     <string name="question_hint">Will there be a quiz tomorrow?</string>
 
     <string name="filler">...</string>
+
+    <string name="source1"><a href="https://www.youtube.com/watch?v=gumbJZ35Hd8">https://www.youtube.com/watch?v=gumbJZ35Hd8</a></string>
+    <string name="source2">Miscellaneous StackOverflow Questions</string>
+
 </resources>
