@@ -10,4 +10,9 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+    <string name="question_prompt">Ask a yes/no question:</string>
+    <string name="question_hint">Will there be a quiz tomorrow?</string>
+
+    <string name="filler">...</string>
 </resources>
