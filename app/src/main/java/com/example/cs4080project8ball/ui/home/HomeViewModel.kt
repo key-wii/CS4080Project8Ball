@@ -5,8 +5,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class HomeViewModel : ViewModel() {
-    var answerBank = listOf(
-        "It is certain.",
+
+    //make answerBank static so answers can be added to all instances
+    companion object {
+        var answerBank = listOf(
+            "It is certain.",
 //        "It is decidedly so.",
 //        "Without a doubt.",
 //        "Yes definitely.",
@@ -25,11 +28,12 @@ class HomeViewModel : ViewModel() {
 //        "My reply is no.",
 //        "My sources say no.",
 //        "Outlook not so good.",
-        "Very doubtful."
-    )
+            "Very doubtful."
+        )
 
-    // adds an answer to the answer bank
-    fun addAnswer(ans:String){
-        answerBank = answerBank + ans
+        // adds an answer to the answer bank
+        fun addAnswer(ans:String){
+            answerBank = answerBank + ans
+        }
     }
 }

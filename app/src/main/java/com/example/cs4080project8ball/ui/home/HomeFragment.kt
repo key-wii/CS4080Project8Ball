@@ -1,7 +1,6 @@
 package com.example.cs4080project8ball.ui.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,15 +36,11 @@ class HomeFragment : Fragment() {
     ): View? {
         val homeViewModel =
             ViewModelProvider(this)[HomeViewModel::class.java]
-        answers = homeViewModel.answerBank
+        answers = HomeViewModel.answerBank
 
-        // inflates layout for fragment
-        val view: View = inflater.inflate(R.layout.fragment_home, container, false)
+        // don't put anything here or app will crash on initialization
 
-        // all the stackoverflow will put the code for stuff here.
-        // but when i do, it crashes, so just. don't touch this place.
-
-        return view
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     // before app starts, after view has been inflated
