@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -27,6 +28,7 @@ class HomeFragment : Fragment() {
     //variables for GUI elements
     private lateinit var imgBtn:ImageButton
     private lateinit var answerText:TextView
+    private lateinit var questionBox: EditText
 
     // when fragment is put into main activity
     override fun onCreateView(
@@ -45,11 +47,18 @@ class HomeFragment : Fragment() {
 
     // before app starts, after view has been inflated
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        //initialize GUI elements
         imgBtn = btnAnswer
         answerText = tvAnswer
+        questionBox = editText
+
+        //initialize display
+        answerText.text = HomeViewModel.lastAnswer
+
         imgBtn.setOnClickListener {
             var rand_answer = answers.random()
             answerText.text = rand_answer
+            HomeViewModel.lastAnswer = rand_answer
         }
     }
 
