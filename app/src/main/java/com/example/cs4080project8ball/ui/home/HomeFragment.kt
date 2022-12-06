@@ -29,6 +29,7 @@ class HomeFragment : Fragment() {
     private lateinit var imgBtn:ImageButton
     private lateinit var answerText:TextView
 
+    // when fragment is put into main activity
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -45,6 +46,15 @@ class HomeFragment : Fragment() {
         // but when i do, it crashes, so just. don't touch this place.
 
         return view
+    }
+
+    // before app starts, after view has been inflated
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        imgBtn = btnAnswer
+        answerText = tvAnswer
+        imgBtn.setOnClickListener {
+            answerText.text = "Hello!"
+        }
     }
 
     override fun onDestroyView() {
