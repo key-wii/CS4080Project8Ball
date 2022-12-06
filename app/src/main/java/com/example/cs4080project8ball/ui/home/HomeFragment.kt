@@ -53,7 +53,8 @@ class HomeFragment : Fragment() {
         imgBtn = btnAnswer
         answerText = tvAnswer
         imgBtn.setOnClickListener {
-            answerText.text = "Hello!"
+            var rand_answer = answers.random()
+            answerText.text = rand_answer
         }
     }
 
