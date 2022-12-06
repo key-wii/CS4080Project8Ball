@@ -27,4 +27,9 @@ class HomeViewModel : ViewModel() {
 //        "Outlook not so good.",
         "Very doubtful."
     )
+
+    // adds an answer to the answer bank
+    fun addAnswer(ans:String){
+        answerBank = answerBank + ans
+    }
 }
