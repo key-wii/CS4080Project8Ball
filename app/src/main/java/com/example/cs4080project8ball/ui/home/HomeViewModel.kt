@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class HomeViewModel : ViewModel() {
-    private var answerBank = listOf(
+    var answerBank = listOf(
         "It is certain.",
         "It is decidedly so.",
         "Without a doubt.",
@@ -27,5 +27,4 @@ class HomeViewModel : ViewModel() {
         "Outlook not so good.",
         "Very doubtful."
     )
-
 }
