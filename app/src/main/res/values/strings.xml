@@ -13,6 +13,7 @@
 
     <string name="question_prompt">Ask a yes/no question:</string>
     <string name="question_hint">Will there be a quiz tomorrow?</string>
+    <string name="answer_hint">Perhaps.</string>
 
     <string name="filler">...</string>
 
